@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+       
+    <dubbo:application name="shop-order-service"/>
+
+    <dubbo:registry protocol="zookeeper" address="${zookeeper.address}" file="${dubbo.file}"/>
+    <dubbo:protocol name="dubbo" port="20881" serialization="kryo" />
+    <dubbo:protocol name="rest" port="7779" contextpath="order_services" server="tomcat"/>
+
+
+    <dubbo:service interface="com.hengheng.shop.order.service.api.OrderProductService" ref="orderProductService" protocol="rest" />
+
+
+    <dubbo:reference interface="com.hengheng.shop.prod.service.inner.ProductInnerService" id="productService" protocol="dubbo" check="false"/>
+
+
+
+
+    <dubbo:provider timeout="10000"/>
+</beans>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>shop-prod</artifactId>
+        <groupId>com.hengheng.shop.prod</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.hengheng.shop.prod.service.imp</groupId>
+    <artifactId>prod-service-imp</artifactId>
+    <packaging>jar</packaging>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.hengheng.shop.prod.service.api</groupId>
+            <artifactId>prod-service-api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.hengheng.shop.prod.service.inner</groupId>
+            <artifactId>prod-service-inner</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.hengheng.shop.prod.mapper</groupId>
+            <artifactId>prod-mapper</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.hengheng.shop.prod.api</groupId>
+            <artifactId>prod-api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.hengheng.shop.prod.api</groupId>
+            <artifactId>prod-api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.hengheng.shop.prod.entity</groupId>
+            <artifactId>prod-entity</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.hengheng.shop.prod.service.inner</groupId>
+            <artifactId>prod-service-inner</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.hengheng.shop.prod.service.api</groupId>
+            <artifactId>prod-service-api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.hengheng.shop.prod.mapper</groupId>
+            <artifactId>prod-mapper</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>prod-service-imp</finalName>
+    </build>
+</project>
